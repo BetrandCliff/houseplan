@@ -1,0 +1,240 @@
+/******************************
+        Variables
+******************************/
+:root{
+    --primaryColor:#fff;
+    ---secondaryColor:#0b9796;
+    --tetiaryColor:#e7de9d;
+    --blackBackground:#000;
+}
+
+/*********************************
+    Line styes per section
+**********************************/
+.line-one,.line-second{
+    width: 140px;
+    height: 2px;
+    background-color: yellow;
+   
+}
+
+.line-one{
+    margin-right: 15px;
+}
+
+.line-second{
+    margin-left: 15px ;
+}
+.line-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:3% ;
+    margin-bottom: 1%
+}
+
+
+/******************************
+        Sections general  styles
+*******************************/
+.section-services{
+
+   padding: 20px;
+   /* background-color: gr; */
+}
+.design-container,.contact-container{
+    height: 70vh;
+}
+
+
+
+/*******************************************
+    Landign page background text
+********************************************/
+.background-title{
+    margin-top: 10%;
+    color:#fff;
+    font-size: 3rem;
+    font-weight:600;
+    
+}
+.background-text{
+    color: var(--primaryColor);
+}
+
+
+
+@media screen and (max-width: 768px) {
+    *{
+        font-size: medium;
+    }
+    .welcome-image{
+        display: none;
+    }
+
+    .welcome-text{
+        font-size: 1.5rem;
+    }
+
+
+}
+
+/*********************************************
+        About section
+**********************************************/
+
+.about-container{
+    background : var(--blackBackground);
+    /* clip-path: polygon(0 14%, 100% 0, 100% 100%, 0% 100%); */
+}
+.contact-container{
+    background-color: var(--blackBackground);
+    clip-path: polygon(0 14%, 100% 0, 100% 100%, 0% 100%);
+
+}
+.contact{
+    color: var(--primaryColor);
+}
+
+
+
+/************************************
+        background 
+*************************************/
+
+.background-container{
+    background-color: var(---secondaryColor);
+    height: 100vh;
+}
+
+.btn-getstart{
+    color:#000;
+}
+
+/**************************************
+        General styles
+**************************************/
+
+
+.tltle-center{ 
+  
+    font-size: 3rem;
+    font-weight: 400;
+    line-height: 1.2cm;
+    padding-bottom: 10px;
+    
+}
+/**********************************
+            services card
+************************************/
+.card-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+}
+.services-card{
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    border: none;
+    background-color: #0b9796;
+    display: flex;justify-content: center;
+    align-items: center;
+}
+
+.services-card:hover{
+    background-color: var(--blackBackground);
+}
+.card{
+    height: 25rem;
+}
+.card:hover{
+    zoom: 1.3;
+}
+.service-title{
+    font-size: 20px;
+}
+
+.service-line{
+    background-color: var(---secondaryColor);
+}
+
+.service-card-wrapper:hover{
+    zoom:200%;
+    background-color:var(--tetiaryColor);
+}
+
+
+
+@media screen and (max-width: 768px) {
+   
+
+    .service-tltle-center{
+        font-size: 1.5rem;
+    }
+
+
+}
+
+
+
+/************************************
+            About styles
+**************************************/
+
+.about-container{
+    padding: 2% 0;
+}
+
+/* .about-header-text{ 
+        padding-top: 3%;
+} */
+
+.about-title-text{
+    font-size: 20px;
+    color: var(--blackBackground);
+    z-index: 3;
+}
+
+.about-title-text{
+    
+    color: #fff;
+}
+
+.image-wrapper{
+    height: 32rem;
+    width: 32rem;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 50%;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    background-color:var(--tetiaryColor) ;
+}
+
+.text-center-about,.lead{ 
+  
+    color: #fff;
+    
+}
+
+.dot-container{
+    display: flex;
+    align-items: center;
+}
+.dot{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color:var(--tetiaryColor);
+    margin-right: 10px;
+}
+@media screen and (max-width: 768px) {
+
+
+    .about-image-container{
+        display: none;
+    }
+
+
+}
