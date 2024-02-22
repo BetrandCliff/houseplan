@@ -2,9 +2,9 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\NotificationsResource\Pages;
-use App\Filament\Resources\NotificationsResource\RelationManagers;
-use App\Models\Notifications;
+use App\Filament\Resources\ProjectResource\Pages;
+use App\Filament\Resources\ProjectResource\RelationManagers;
+use App\Models\Projects;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -13,18 +13,26 @@ use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
-class NotificationsResource extends Resource
+class ProjectResource extends Resource
 {
-    protected static ?string $model = Notifications::class;
+    protected static ?string $model = Projects::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
-    protected static ?string $navigationGroup ="Clients";
 
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
                 //
+
+            Forms\Components\TextInput::make('name')
+                ->maxLength(255),
+            Forms\Components\TextInput::make('description')
+                ->maxLength(255),
+           
+            Forms\Components\FileUpload::make('image')
+                ->image(),
+           
             ]);
     }
 
@@ -32,6 +40,15 @@ class NotificationsResource extends Resource
     {
         return $table
             ->columns([
+                //
+
+                Tables\Columns\TextColumn::make('name')
+                    ->searchable(),
+                Tables\Columns\TextColumn::make('description')
+                    ->searchable(),
+               
+                Tables\Columns\ImageColumn::make('image'),
+               
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
@@ -64,9 +81,9 @@ class NotificationsResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListNotifications::route('/'),
-            'create' => Pages\CreateNotifications::route('/create'),
-            'edit' => Pages\EditNotifications::route('/{record}/edit'),
+            'index' => Pages\ListProjects::route('/'),
+            'create' => Pages\CreateProject::route('/create'),
+            'edit' => Pages\EditProject::route('/{record}/edit'),
         ];
     }
 }

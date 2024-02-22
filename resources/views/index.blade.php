@@ -209,7 +209,7 @@
               <h3>Architectural Design(2D/3D) </h3>
               <p>.Provide you with different types of design base on your need.</p>
 
-              <a href="/service-details" class="readmore stretched-link ">Learn more <i class="bi bi-arrow-right"></i></a>
+              <!-- <a href="/service-details" class="readmore stretched-link ">Learn more <i class="bi bi-arrow-right"></i></a> -->
             </div>
           </div><!-- End Service Item -->
 
@@ -220,7 +220,7 @@
               </div>
               <h3>Land Survey</h3>
               <p>we Survey lands</p>
-              <a href="/service-details" class="readmore stretched-link">Learn more <i class="bi bi-arrow-right"></i></a>
+              <!-- <a href="/service-details" class="readmore stretched-link">Learn more <i class="bi bi-arrow-right"></i></a> -->
             </div>
           </div><!-- End Service Item -->
 
@@ -231,7 +231,7 @@
               </div>
               <h3>General construction</h3>
               <p>Modern and beautify construction services we provide</p>
-              <a href="/service-details" class="readmore stretched-link">Learn more <i class="bi bi-arrow-right"></i></a>
+              <!-- <a href="/service-details" class="readmore stretched-link">Learn more <i class="bi bi-arrow-right"></i></a> -->
             </div>
           </div><!-- End Service Item -->
 
@@ -242,7 +242,7 @@
               </div>
               <h3>Electrical Wiring</h3>
               <p>House wiring, following modern and correct standards </p>
-              <a href="/service-details" class="readmore stretched-link">Learn more <i class="bi bi-arrow-right"></i></a>
+              <!-- <a href="/service-details" class="readmore stretched-link">Learn more <i class="bi bi-arrow-right"></i></a> -->
             </div>
           </div><!-- End Service Item -->
 
@@ -253,7 +253,7 @@
               </div>
               <h3>Plumbing</h3>
               <p>Proper connection of water intoa and out of the house</p>
-              <a href="/service-details" class="readmore stretched-link">Learn more <i class="bi bi-arrow-right"></i></a>
+              <!-- <a href="/service-details" class="readmore stretched-link">Learn more <i class="bi bi-arrow-right"></i></a> -->
             </div>
           </div><!-- End Service Item -->
 
@@ -264,7 +264,7 @@
               </div>
               <h3>Drafting of quality estimate</h3>
               <p>Apppointement can be booked with us on how to draft quality estimates</p>
-              <a href="/service-details" class="readmore stretched-link">Learn more <i class="bi bi-arrow-right"></i></a>
+              <!-- <a href="/service-details" class="readmore stretched-link">Learn more <i class="bi bi-arrow-right"></i></a> -->
             </div>
           </div><!-- End Service Item -->
 
@@ -275,7 +275,7 @@
               </div>
               <h3>Plastering,flooring and Tiling</h3>
               <p>We put tiles, plastering  and flooring</p>
-              <a href="/service-details" class="readmore stretched-link">Learn more <i class="bi bi-arrow-right"></i></a>
+              <!-- <a href="/service-details" class="readmore stretched-link">Learn more <i class="bi bi-arrow-right"></i></a> -->
             </div>
           </div><!-- End Service Item -->
 
@@ -287,7 +287,7 @@
               </div>
               <h3>Consultancy</h3>
               <p>Apppointement can be book with us for consultation</p>
-              <a href="/service-details" class="readmore stretched-link">Learn more <i class="bi bi-arrow-right"></i></a>
+              <!-- <a href="/service-details" class="readmore stretched-link">Learn more <i class="bi bi-arrow-right"></i></a> -->
             </div>
           </div><!-- End Service Item -->
 

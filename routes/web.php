@@ -52,3 +52,12 @@ Route::get('/plans', function () {
 Route::get('/plans-details', function () {
     return view('plans-details');
 });
+
+// Route::group([
+//     'middleware' => ['api', 'cors'],
+//     'namespace' => $this->namespace,
+//     'prefix' => 'api',
+// ], function ($router) {
+//      //Add you routes here, for example:
+//      Route::apiResource('/posts','PostController');
+// });

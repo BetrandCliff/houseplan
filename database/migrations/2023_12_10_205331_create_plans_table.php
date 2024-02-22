@@ -13,12 +13,12 @@ return new class extends Migration
     {
         Schema::create('plans', function (Blueprint $table) {
             $table->id();
-            // $table->foreignId()->constrained()->cascadeOndelete();
             $table->string("name")->nullable();
             $table->string("description")->nullable();
             $table->string("price")->nullable();
             $table->string("number_of_rooms");
             $table->string("image")->nullable();
+            $table->string("2D_image")->nullable();
             $table->timestamps();
         });
     }

@@ -2,9 +2,9 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\PostResource\Pages;
-use App\Filament\Resources\PostResource\RelationManagers;
-use App\Models\Post;
+use App\Filament\Resources\PlansResource\Pages;
+use App\Filament\Resources\PlansResource\RelationManagers;
+use App\Models\Plans;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -13,29 +13,29 @@ use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
-class PostResource extends Resource
+class PlansResource extends Resource
 {
-    protected static ?string $model = Post::class;
+    protected static ?string $model = Plans::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
-    protected static ?string $navigationGroup ="Post";
 
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
                 Forms\Components\TextInput::make('name')
-                    ->required()
                     ->maxLength(255),
                 Forms\Components\TextInput::make('description')
                     ->maxLength(255),
-                    Forms\Components\TextInput::make('price')
+                Forms\Components\TextInput::make('price')
+                    ->maxLength(255),
+                Forms\Components\TextInput::make('number_of_rooms')
+                    ->required()
                     ->maxLength(255),
                 Forms\Components\FileUpload::make('image')
-                    ->image()
-                    ->multiple()
-                    // ->stacked()
-                    // ->limit(4),
+                    ->image(),
+                Forms\Components\FileUpload::make('2D_image')
+                    ->image(),
             ]);
     }
 
@@ -47,10 +47,12 @@ class PostResource extends Resource
                     ->searchable(),
                 Tables\Columns\TextColumn::make('description')
                     ->searchable(),
-                    Tables\Columns\TextColumn::make('price')
+                Tables\Columns\TextColumn::make('price')
+                    ->searchable(),
+                Tables\Columns\TextColumn::make('number_of_rooms')
                     ->searchable(),
                 Tables\Columns\ImageColumn::make('image'),
-                    // ->directory("images"),
+                Tables\Columns\ImageColumn::make('2D_image'),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
@@ -83,9 +85,9 @@ class PostResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListPosts::route('/'),
-            'create' => Pages\CreatePost::route('/create'),
-            'edit' => Pages\EditPost::route('/{record}/edit'),
+            'index' => Pages\ListPlans::route('/'),
+            'create' => Pages\CreatePlans::route('/create'),
+            'edit' => Pages\EditPlans::route('/{record}/edit'),
         ];
     }
 }
